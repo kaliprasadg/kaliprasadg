@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<export cms="ABSDD" cmsdetails="ONLINE DGSYN220/BABS" created="2022-04-08" datadefinitions="0" documents="1" sets="3" type="ONLINE">
+    <languages/>
+    <document archiving="mandatory" businessarea="VE" businessobject="" changed="2022-04-06 11:49:18.758" changeuser="" checkoutstate="I" classification="XBRI" clientlist="" datadefinition="" escalation="false" group="ALL" id="SYO00224" languagelist="" lastchanged="2022-04-06 11:49:18.758" outputtype="T" paymentorder="false" registered="false" resourceid="567b36c1-b0fe-11ec-a923-0022485b3596" responseletter="false" sensitivity="" useorder="false" validfrom="2022-03-31" validto="9999-12-31" version="1.0.0" workflowstep="1000">
+        <description>
+            <translation language="EUK">Reminder for PostIdent coupon - CB460VNUB</translation>
+        </description>
+        <usages>
+            <usage>print</usage>
+        </usages>
+        <context cardinality="choice" contextclass="VERTRAG" filter="" id="CONTRACT" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="CONTRACT" params="" usage="K">
+            <context cardinality="all" contextclass="PERSON" filter="" id="POLICY_HOLDER" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="POLICY_HOLDER" params="" usage="K">
+                <include ref="ad1533bc-3bc0-11ec-a8eb-00224838fe32"/>
+            </context>
+            <context cardinality="all" contextclass="PERSON" filter="" id="INSURED_PERSONS" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="INSURED_PERSONS" params="" usage="K">
+                <include ref="04ccba2b-82b5-11ec-9deb-0022485bc01d"/>
+            </context>
+            <context cardinality="choice" contextclass="VERMITTLER_DEF" filter="" id="AGENT" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="AGENT" params="" usage="K">
+                <include ref="e2fc3cf3-a618-11ec-b8f8-0022485bc01b"/>
+            </context>
+            <context cardinality="choice" contextclass="VERTRAG" filter="" id="#ELEMENT" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="ELEMENT" params="" usage="K">
+                <context cardinality="all" contextclass="VERMITTLER_DEF" filter="" id="AGENT" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="AGENT" params="" usage="K">
+                    <data-item alias="" condition="" defaultvalue="" id="PERSNRVERTRIEB" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="true" order="" outputid="" type="A"/>
+                    <data-item alias="" condition="" defaultvalue="" id="VERMKATEGORIE" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="true" order="" outputid="" type="A"/>
+                </context>
+            </context>
+            <data-item alias="" condition="" defaultvalue="" id="FIRMA" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="FIRMA_CODE" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="POLLFNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="CONTRACT_NR" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="BEGDAT" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="STARTING_DATE" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="ABLDAT" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="EXPIRY_DATE" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="HSP_PRODBEZ" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PRODUCT_NAME" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="HSP_PRODKBEZ" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PRODUCT_CODE" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="ZAHLWEISE" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PAYEMENT_FREQUENCY" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="VERTRART" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="CONTRACT_TYPE" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="CONTRACTSUBTYPE" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="CONTRACT_SUBTYPE" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="CURRENCY" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="CURRENCY" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="WIRKBEGDAT" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="EFFECTIVE_DATE" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="AUTORISED_REPRESENTATIVE_AGENCY_NR" isautomatic="true" iscalculated="true" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="AUTORISED_REPRESENTATIVE_AGENCY_NR" type="A">
+                <calculation>
+                    <variable alias="CC" name="PERSNRVERTRIEB"/>
+                    <expression>CC</expression>
+                </calculation>
+            </data-item>
+        </context>
+    </document>
+    <set changed="2022-03-31 15:47:26.212" changeuser="" checkoutstate="I" class="PERSON" id="POLICY_HOLDER_SHAREDSET" lastchanged="0001-01-01 00:00:00.0" resourceid="ad1533bc-3bc0-11ec-a8eb-00224838fe32" type="context" version="1.0.0" workflowstep="1000">
+        <description>
+            <translation language="EUK">POLICY_HOLDER_SHAREDSET</translation>
+        </description>
+        <context cardinality="all" contextclass="PERSON" filter="" id="PERSON" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="PERSON" params="" usage="K">
+            <context cardinality="all" contextclass="NATPERS" filter="" id="NATPERS" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="NATPERS" params="" usage="K">
+                <context cardinality="all" contextclass="Ausweis" filter="" id="Ausweis" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="IDENTIFICATION" params="" usage="K">
+                    <data-item alias="" condition="" defaultvalue="" id="AUSDATUM" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="ID_EXPIRATION_DATE" type="A">
+                        <description>
+                            <translation language="EUK">ID EXPERATION DATE </translation>
+                        </description>
+                    </data-item>
+                    <data-item alias="" condition="" defaultvalue="" id="AUSWEISNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="ID_NR" type="A">
+                        <description>
+                            <translation language="EUK">id NUMBER</translation>
+                        </description>
+                    </data-item>
+                </context>
+                <context cardinality="all" contextclass="Beruf" filter="" id="Beruf" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="BERUF" params="" usage="K">
+                    <data-item alias="" condition="" defaultvalue="" id="BERUF" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="true" order="" outputid="" type="A"/>
+                </context>
+                <data-item alias="" condition="" defaultvalue="" id="GEBURTSDATUM" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="BIRTHDAY" type="A">
+                    <description>
+                        <translation language="EUK">IP Birthday for natural person</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="VORNAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="FIRST_NAME" type="A">
+                    <description>
+                        <translation language="EUK">IP First name for natural person</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="FAMNAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="LAST_NAME" type="A">
+                    <description>
+                        <translation language="EUK">IP Family name for natural person</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="ZWNAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="MIDDLE_NAME" type="A">
+                    <description>
+                        <translation language="EUK">IP middle name for natural person</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="GESCHLECHT" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="SALUTATION" type="A"/>
+                <data-item alias="" condition="" defaultvalue="" id="AKADGRAD" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="ACADEMIC_TITLE" type="A"/>
+                <data-item alias="" condition="" defaultvalue="" id="OCCUPATION" isautomatic="true" iscalculated="true" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="OCCUPATION" type="A">
+                    <calculation>
+                        <variable alias="OCC" name="BERTUF"/>
+                        <expression>OCC</expression>
+                    </calculation>
+                </data-item>
+            </context>
+            <context cardinality="all" contextclass="Adresse" filter="" id="Adresse" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="ADDRESS" params="" usage="K">
+                <data-item alias="" condition="" defaultvalue="" id="HAUSNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="HOUSE_NR" type="A">
+                    <description>
+                        <translation language="EUK">Address number </translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="ORTSTEIL" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="DISTRICT" type="A"/>
+                <data-item alias="" condition="" defaultvalue="" id="ORTSCHAFT" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="CITY" type="A">
+                    <description>
+                        <translation language="EUK">city</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="STIEGE" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="STAIRWELL_NR" type="A">
+                    <description>
+                        <translation language="EUK">stairwayNumber</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="TUERNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="DOOR" type="A">
+                    <description>
+                        <translation language="EUK">Door Number</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="STRASSE" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="STREET_NAME" type="A">
+                    <description>
+                        <translation language="EUK">Street</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="HAUSNRZUS" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="HOUSE_NR_SUPPLEMENT" type="A">
+                    <description>
+                        <translation language="EUK">House number supplement</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="POSTLANDSCHL" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="COUNTRY_CODE" type="A">
+                    <description>
+                        <translation language="EUK">country code</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="STRASSE_TYP" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="STREET_TYPE" type="A">
+                    <description>
+                        <translation language="EUK">street type</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="FLOOR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="FLOOR" type="A">
+                    <description>
+                        <translation language="EUK">Floor number</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="GEMEINDEKZAHL" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="MUNICIPALITY" type="A">
+                    <description>
+                        <translation language="EUK">Municipality</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="POSTLEITZAHL" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="POSTAL_CODE" type="A">
+                    <description>
+                        <translation language="EUK">postal code</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="POSTFACH" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PO_BOX" type="A">
+                    <description>
+                        <translation language="EUK">Post number</translation>
+                    </description>
+                </data-item>
+            </context>
+            <context cardinality="all" contextclass="Komm" filter="KOMMART='T'" id="Komm" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="COM_PHONE" params="" usage="K">
+                <description>
+                    <translation language="EUK">Communication</translation>
+                </description>
+                <data-item alias="" condition="" defaultvalue="" id="KENNUNG" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PHONE_NR" type="A">
+                    <description>
+                        <translation language="EUK">PHONE NUMBER </translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="KOMMPRIOR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PRIORITY" type="A"/>
+            </context>
+            <context cardinality="all" contextclass="Komm" filter="KOMMART='F'" id="Komm" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="COM_FAX" params="" usage="K">
+                <description>
+                    <translation language="EUK">Communication</translation>
+                </description>
+                <data-item alias="" condition="" defaultvalue="" id="KENNUNG" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="FAX_NR" type="A">
+                    <description>
+                        <translation language="EUK">fax</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="KOMMPRIOR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PRIORITY" type="A"/>
+            </context>
+            <context cardinality="all" contextclass="Komm" filter="KOMMART='E'" id="Komm" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="COM_EMAIL" params="" usage="K">
+                <description>
+                    <translation language="EUK">Communication</translation>
+                </description>
+                <data-item alias="" condition="" defaultvalue="" id="KENNUNG" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="EMAIL_CONTACT" type="A">
+                    <description>
+                        <translation language="EUK">Email</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="KOMMPRIOR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PRIORITY" type="A"/>
+            </context>
+            <context cardinality="all" contextclass="JURPERS" filter="" id="JURPERS" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="JURPERS" params="" usage="K">
+                <description>
+                    <translation language="EUK">LEGAL PERSON </translation>
+                </description>
+                <data-item alias="" condition="" defaultvalue="" id="FIRMENNAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="COMPANY_NAME" type="A">
+                    <description>
+                        <translation language="EUK">Legal person name</translation>
+                    </description>
+                </data-item>
+            </context>
+            <context cardinality="all" contextclass="VNehmer" filter="" id="VNehmer" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="VNEHMER" params="" usage="K">
+                <data-item alias="" condition="" defaultvalue="" id="KZHAUPTVN" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="true" order="" outputid="" type="A">
+                    <description>
+                        <translation language="EUK">main policy hodler</translation>
+                    </description>
+                </data-item>
+            </context>
+            <context cardinality="all" contextclass="Komm" filter="KOMMART='H'" id="Komm" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="COM_MOBILE" params="" usage="K">
+                <description>
+                    <translation language="EUK">Communication</translation>
+                </description>
+                <data-item alias="" condition="" defaultvalue="" id="KENNUNG" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="MOBILE_NR" type="A">
+                    <description>
+                        <translation language="EUK">MOBILE NUMBER </translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="KOMMPRIOR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PRIORITY" type="A"/>
+            </context>
+            <data-item alias="" condition="" defaultvalue="" id="KZPERS" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PERSON_TYPE" type="A"/>
+            <data-item alias="" condition="" defaultvalue="" id="MAIN_POLICY_HOLDER" isautomatic="true" iscalculated="true" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="MAIN_POLICY_HOLDER" type="A">
+                <calculation>
+                    <variable alias="KZ" name="KZHAUPTVN"/>
+                    <expression>KZ</expression>
+                </calculation>
+            </data-item>
+        </context>
+    </set>
+    <set changed="2022-03-31 16:00:09.586" changeuser="" checkoutstate="I" class="PERSON" id="INSURED_PERSON_SHAREDSET" lastchanged="0001-01-01 00:00:00.0" resourceid="04ccba2b-82b5-11ec-9deb-0022485bc01d" type="context" version="1.0.0" workflowstep="1000">
+        <description>
+            <translation language="EUK">INSURED_PERSON_SHAREDSET</translation>
+        </description>
+        <context cardinality="all" contextclass="PERSON" filter="" id="PERSON" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="PERSON" params="" usage="K">
+            <context cardinality="all" contextclass="NATPERS" filter="" id="NATPERS" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="NATPERS" params="" usage="K">
+                <context cardinality="all" contextclass="Ausweis" filter="" id="Ausweis" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="IDENTIFICATION" params="" usage="K">
+                    <data-item alias="" condition="" defaultvalue="" id="AUSDATUM" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="ID_EXPIRATION_DATE" type="A">
+                        <description>
+                            <translation language="EUK">ID EXPERATION DATE </translation>
+                        </description>
+                    </data-item>
+                    <data-item alias="" condition="" defaultvalue="" id="AUSWEISNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="ID_NR" type="A">
+                        <description>
+                            <translation language="EUK">id NUMBER</translation>
+                        </description>
+                    </data-item>
+                </context>
+                <data-item alias="" condition="" defaultvalue="" id="GEBURTSDATUM" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="BIRTHDAY" type="A">
+                    <description>
+                        <translation language="EUK">IP Birthday for natural person</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="VORNAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="FIRST_NAME" type="A">
+                    <description>
+                        <translation language="EUK">IP First name for natural person</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="FAMNAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="LAST_NAME" type="A">
+                    <description>
+                        <translation language="EUK">IP Family name for natural person</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="ZWNAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="MIDDLE_NAME" type="A">
+                    <description>
+                        <translation language="EUK">IP middle name for natural person</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="GESCHLECHT" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="GENDER" type="A"/>
+            </context>
+            <context cardinality="all" contextclass="JURPERS" filter="" id="JURPERS" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="JURPERS" params="" usage="K">
+                <description>
+                    <translation language="EUK">LEGAL PERSON </translation>
+                </description>
+                <data-item alias="" condition="" defaultvalue="" id="FIRMENNAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="COMPANY_NAME" type="A">
+                    <description>
+                        <translation language="EUK">Legal person name</translation>
+                    </description>
+                </data-item>
+            </context>
+            <context cardinality="all" contextclass="Adresse" filter="" id="Adresse" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="ADDRESS" params="" usage="K">
+                <data-item alias="" condition="" defaultvalue="" id="HAUSNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="HOUSE_NR" type="A">
+                    <description>
+                        <translation language="EUK">Address number </translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="ORTSTEIL" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="DISTRICT" type="A"/>
+                <data-item alias="" condition="" defaultvalue="" id="ORTSCHAFT" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="CITY" type="A">
+                    <description>
+                        <translation language="EUK">city</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="STIEGE" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="STAIRWELL_NR" type="A">
+                    <description>
+                        <translation language="EUK">stairwayNumber</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="TUERNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="DOOR" type="A">
+                    <description>
+                        <translation language="EUK">Door Number</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="STRASSE" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="STREET_NAME" type="A">
+                    <description>
+                        <translation language="EUK">Street</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="HAUSNRZUS" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="HOUSE_NR_SUPPLEMENT" type="A">
+                    <description>
+                        <translation language="EUK">House number supplement</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="POSTLANDSCHL" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="COUNTRY_CODE" type="A">
+                    <description>
+                        <translation language="EUK">country code</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="STRASSE_TYP" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="STREET_TYPE" type="A">
+                    <description>
+                        <translation language="EUK">street type</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="FLOOR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="FLOOR" type="A">
+                    <description>
+                        <translation language="EUK">Floor number</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="GEMEINDEKZAHL" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="MUNICIPALITY" type="A">
+                    <description>
+                        <translation language="EUK">Municipality</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="POSTLEITZAHL" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="POSTAL_CODE" type="A">
+                    <description>
+                        <translation language="EUK">postal code</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="POSTFACH" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PO_BOX" type="A">
+                    <description>
+                        <translation language="EUK">Post number</translation>
+                    </description>
+                </data-item>
+            </context>
+            <context cardinality="all" contextclass="Komm" filter="KOMMART='E'" id="Komm" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="COM_EMAIL" params="" usage="K">
+                <description>
+                    <translation language="EUK">Communication</translation>
+                </description>
+                <data-item alias="" condition="" defaultvalue="" id="KENNUNG" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="EMAIL_CONTACT" type="A">
+                    <description>
+                        <translation language="EUK">Email</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="KOMMPRIOR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PRIORITY" type="A"/>
+            </context>
+            <context cardinality="all" contextclass="Komm" filter="KOMMART='F'" id="Komm" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="COM_FAX" params="" usage="K">
+                <description>
+                    <translation language="EUK">Communication</translation>
+                </description>
+                <data-item alias="" condition="" defaultvalue="" id="KENNUNG" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="FAX_NR" type="A">
+                    <description>
+                        <translation language="EUK">fax</translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="KOMMPRIOR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PRIORITY" type="A"/>
+            </context>
+            <context cardinality="all" contextclass="Komm" filter="KOMMART='T'" id="Komm" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="COM_PHONE" params="" usage="K">
+                <description>
+                    <translation language="EUK">Communication</translation>
+                </description>
+                <data-item alias="" condition="" defaultvalue="" id="KENNUNG" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PHONE_NR" type="A">
+                    <description>
+                        <translation language="EUK">PHONE NUMBER </translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="KOMMPRIOR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PRIORITY" type="A"/>
+            </context>
+            <context cardinality="all" contextclass="Komm" filter="KOMMART='H'" id="Komm" isexported="false" ispersonsearchable="false" isrole="false" order="" outputid="COM_MOBILE" params="" usage="K">
+                <description>
+                    <translation language="EUK">Communication</translation>
+                </description>
+                <data-item alias="" condition="" defaultvalue="" id="KENNUNG" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="MOBILE_NR" type="A">
+                    <description>
+                        <translation language="EUK">MOBILE NUMBER </translation>
+                    </description>
+                </data-item>
+                <data-item alias="" condition="" defaultvalue="" id="KOMMPRIOR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PRIORITY" type="A"/>
+            </context>
+        </context>
+    </set>
+    <set changed="2022-03-17 18:37:58.937" changeuser="" checkoutstate="I" class="VERMITTLER_DEF" id="AGENT_SHAREDSET" lastchanged="0001-01-01 00:00:00.0" resourceid="e2fc3cf3-a618-11ec-b8f8-0022485bc01b" type="context" version="1.0.0" workflowstep="1000">
+        <description>
+            <translation language="EUK">Agent data Shared set </translation>
+        </description>
+        <data-item alias="" condition="" defaultvalue="" id="NAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="LAST_NAME" type="A"/>
+        <data-item alias="" condition="" defaultvalue="" id="VORNAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="FIRST_NAME" type="A"/>
+        <data-item alias="" condition="" defaultvalue="" id="ZWNAME" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="MIDDLE_NAME" type="A"/>
+        <data-item alias="" condition="" defaultvalue="" id="WERBERNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="AGENT_ID" type="A"/>
+        <data-item alias="" condition="" defaultvalue="" id="ANRTITEL" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="SALUTATION" type="A"/>
+        <data-item alias="" condition="" defaultvalue="" id="VERMTYP" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="AGENT_TYPE" type="A"/>
+        <data-item alias="" condition="" defaultvalue="" id="VERM_USERID" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="AGENCE_REGISTER_NR" type="A">
+            <description>
+                <translation language="EUK">AGENCE_REGISTER_NR</translation>
+            </description>
+        </data-item>
+        <data-item alias="" condition="" defaultvalue="" id="TELNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="PHONE" type="A"/>
+        <data-item alias="" condition="" defaultvalue="" id="MOBILTELNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="MOBILE" type="A"/>
+        <data-item alias="" condition="" defaultvalue="" id="FAXNR" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="FAX" type="A"/>
+        <data-item alias="" condition="" defaultvalue="" id="EMAIL" isautomatic="true" iscalculated="false" ischangeable="false" ismandatory="false" istemporary="false" order="" outputid="EMAIL" type="A"/>
+    </set>
+</export>
